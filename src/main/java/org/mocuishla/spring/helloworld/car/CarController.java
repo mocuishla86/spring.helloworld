@@ -12,7 +12,7 @@ import java.util.List;
 public class CarController {
 
     @GetMapping(value = "", produces = "application/json")
-    public ResponseEntity<List<Car>> getLanguages() {
+    public ResponseEntity<List<Car>> getCars() {
         return ResponseEntity.ok(List.of(new Car(1L, "Opel Astra", "verde")));
     }
 
