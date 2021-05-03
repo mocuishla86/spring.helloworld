@@ -5,6 +5,8 @@
 ## Concepts
 
 - Dependency Injection
+- Collaborators
 - POJO
 - Bean
 - Data Access Object (DAO)
+
