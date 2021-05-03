@@ -10,10 +10,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/cars")
 public class CarController {
+    private CarService carService;
 
+    public CarController(CarService carService){
+        this.carService = carService;
+    }
     @GetMapping(value = "", produces = "application/json")
     public ResponseEntity<List<Car>> getCars() {
-        return ResponseEntity.ok(List.of(new Car(1L, "Opel Astra", "verde")));
+        return ResponseEntity.ok(carService.getCars());
     }
 
 }
